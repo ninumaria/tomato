@@ -11,7 +11,12 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
+    <style>
+        h1,a{
+           text-align: center;
+        }
+      
+    </style>
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
@@ -35,18 +40,22 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Login Page</h1>
+        <h1 class="title">Welcome Page</h1>
       </ion-header-bar>
       <ion-content>
-          <div class="container">
-              <div class="row">
-                  <section class="col-xs-6">
-                      <h1>Buttons</h1>
-                      <a class="btn btn-primary" href="#" role="button" onclick="loginValue()">Login</a>
-                      <a class="btn btn-success" href="#" role="button" onclick="registerValue()">Register</a>
-                  </section>
-              </div>
-          </div>
+          <div class="container-fluid">
+              
+                      <h1>WELCOME TO</h1>
+                      <h1>TO-DO LIST</h1>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <a class="btn btn-primary btn-block" href="#" role="button" onclick="loginValue()">Login</a>
+                  
+                      <a class="btn btn-success btn-block" href="#" role="button" onclick="registerValue()">Register</a>
+         </div> 
+              
       </ion-content>
     </ion-pane>
   </body>
