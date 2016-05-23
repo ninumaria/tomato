@@ -11,25 +11,131 @@
                 text-align: center;
                 
             }
+            
+            
+            
+            #newitem{
+                text-align: center;
+            }
+            
+             
+           section {
+               
+               margin-left: 2cm;
+           }
+            
+            #todolist{
+                font-size: 24px;
+                color:red;
+            }
+            
         </style>
+     
         <script src="js/jquery-1.12.3.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        
+       <!-- <script>
+          function inputedtext(){
+              var a = document.getElementById("listitem").value;
+              console.log(a);
+              //$('#sss').append(a + '&#xA;');
+              document.getElementById("sss").value = a ;
+              document.getElementById("listitem").value = "";
+          } 
+            
+        </script>-->
+        
+      
+      
+        
+        
         <script>
         function backValue(){
             window.location="index.html";
         }
         </script>
         
+        
     </head>
     <body>
         
+        
+        
+        
          <div>
-             <h1>SUCCESS</h1>
+             <h1>TO-DO ITEMS</h1>
+             <br/>
+             <br/>
+             <!--<div id="it" >
+                 <h3>Enter The Item</h3>
+                 <input type="text"  placeholder="Enter the items" id="listitem"/>
+                 <br/>
+                 <br/>
+                 <div class="container">
+                 <a class="btn btn-primary btn-sm" href="#" id="btAdd" role="button" >Enter</a>
+                </div>
+             </div>-->
+             <section id="ddd">
+                 
+                 <form action="#" method="post">
+                    <div>
+                        
+                        <input type="text" id="newitem" name="newitem" placeholder="items"/>
+                     <input value="Add" type="submit" />
+                  
+                    </div> 
+                 </form>
+                 <br/>
+                 <h2>List Items</h2>
+                 <ul id="todolist"></ul>
+            </section>
+             <br/>
+             <br/>
+             
+             
+            <!-- <div id="items">
+                <br><input type="text" name="myInputs[]" id="sss">
+                 <input type="checkbox" name="vehicle" value="Bike">
+                 <br> 
+             </div> -->
+             
              <br/>
              <br/>
              <div class="container">
-                 <a class="btn btn-primary btn-large btn-block" href="#" role="button" onclick="backValue()">Submit</a>
+                 <a class="btn btn-primary btn-large btn-block" href="#" role="button" onclick="backValue()">BACK</a>
            </div>
         </div>
+        
+        <script>
+         (function(){
+            var todo = document.querySelector( '#todolist' ),
+            form = document.querySelector( 'form' ),
+            field = document.querySelector( '#newitem' );
+    
+            form.addEventListener( 'submit', function( ev ) {
+            var text = field.value;
+            if ( text !== '' ) {
+            todo.innerHTML += '<li>' + text + '</li>';
+            field.value = '';
+            field.focus();
+            }
+            ev.preventDefault();
+            }, false);
+
+            todo.addEventListener( 'click', function( ev ) {
+            var t = ev.target;
+            if ( t.tagName === 'LI' ) {
+            if ( t.classList.contains( 'done' ) ) {
+            t.parentNode.removeChild( t );
+            } else {  
+            t.classList.add( 'done' );
+            }
+            };
+            ev.preventDefault();
+            }, false);
+
+            })();
+
+        </script>
     </body>
 </html>
